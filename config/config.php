@@ -1,22 +1,26 @@
 <?php
 
+use \OZiTAG\Tager\Backend\Backup\Enums\BackupFrequencyType;
 use \OZiTAG\Tager\Backend\Backup\Enums\BackupSourceType;
 
 return [
-
     'auto_backup' => true,
 
     'sources' => [
-        [
-            'type' => BackupSourceType::DATABASE,
-            'connection' => 'mysql',
-        ],
+//        [
+//            'type' => BackupSourceType::DATABASE,
+//            'connection' => 'mysql',
+//            'frequency' => [
+//                'value' => 'everyTwoHours',
+//            ],
+//        ],
 //        [
 //            'type' => BackupSourceType::FOLDER,
 //            'path' => storage_path('app/public/uploads'),
-//            'frequency' => [
-//                'value' => 'everyTwoMinutes',
-//            ],
+//        ],
+//        [
+//            'type' => BackupSourceType::FILE,
+//            'path' => storage_path('app/public/uploads') . '/some_file.txt',
 //        ],
     ],
 
@@ -29,10 +33,10 @@ return [
         ],
         'frequency' => [
             'cron_value' => null,
-            'value' => 'everyMinute',
+            'value' => 'daily',
         ],
         'encryption' => [
-            'algorithm' => ZipArchive::EM_AES_256,
+            'algorithm' => \ZipArchive::EM_AES_256,
             'password' => 'qwerty',
         ],
         'archive_prefix' => '',

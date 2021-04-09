@@ -7,8 +7,8 @@ use OZiTAG\Tager\Backend\Backup\Dto\DbConnectionDto;
 
 abstract class DatabaseDumper
 {
-    protected string $temp_disk;
-    protected ?string $temp_directory;
+    protected $temp_disk;
+    protected $temp_directory;
 
     public function __construct(
         protected DbConnectionDto $conection
@@ -22,6 +22,6 @@ abstract class DatabaseDumper
     public function getConnectionDump(): string {
         return $this->makeDump();
     }
-
+    
     protected function makeDump(): string {}
 }

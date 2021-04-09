@@ -35,4 +35,9 @@ class InvalidSourceConfigurationException extends Exception
     {
         return new static('Frequency not filled');
     }
+
+    public static function pathNotFilled(): self
+    {
+        return new static('path not filled');
+    }
 }
