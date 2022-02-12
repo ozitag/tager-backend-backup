@@ -1,6 +1,5 @@
 <?php
 
-use \OZiTAG\Tager\Backend\Backup\Enums\BackupFrequencyType;
 use \OZiTAG\Tager\Backend\Backup\Enums\BackupSourceType;
 
 return [

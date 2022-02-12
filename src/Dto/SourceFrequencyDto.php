@@ -25,11 +25,13 @@ class SourceFrequencyDto extends Dto
         }
     }
 
-    public function getFunction(): string {
+    public function getFunction(): string
+    {
         return $this->function;
     }
 
-    public function getArgs(): array {
+    public function getArgs(): array
+    {
         return $this->args;
     }
 }

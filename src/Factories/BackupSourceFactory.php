@@ -16,9 +16,9 @@ class BackupSourceFactory
         $source_data = array_merge(Config::get('tager-backup.default_source'), $source_data);
 
         return match ($source_data['type'] ?? null) {
-            BackupSourceType::DATABASE => new DatabaseSourceDto($source_data),
-            BackupSourceType::FOLDER => new FolderSourceDto($source_data),
-            BackupSourceType::FILE => new FileSourceDto($source_data),
+            BackupSourceType::DATABASE->value => new DatabaseSourceDto($source_data),
+            BackupSourceType::FOLDER->value => new FolderSourceDto($source_data),
+            BackupSourceType::FILE->value => new FileSourceDto($source_data),
             default => throw InvalidSourceConfigurationException::unsupportedType()
         };
     }

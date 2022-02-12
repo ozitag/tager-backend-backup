@@ -12,11 +12,12 @@ use OZiTAG\Tager\Backend\Core\Jobs\Operation;
 
 class BackupOperationFactory
 {
-    public static function getOperaion(SourceDto $source): Operation {
+    public static function getOperation(SourceDto $source): Operation
+    {
         return match ($source->getType()) {
-            BackupSourceType::DATABASE => new CreateDatabaseBackupOperation($source),
-            BackupSourceType::FOLDER => new CreateFolderBackupOperation($source),
-            BackupSourceType::FILE => new CreateFileBackupOperation($source),
+            BackupSourceType::DATABASE->value => new CreateDatabaseBackupOperation($source),
+            BackupSourceType::FOLDER->value => new CreateFolderBackupOperation($source),
+            BackupSourceType::FILE->value => new CreateFileBackupOperation($source),
             default => throw InvalidSourceConfigurationException::unsupportedType()
         };
     }

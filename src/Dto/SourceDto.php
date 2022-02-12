@@ -27,7 +27,8 @@ class SourceDto extends Dto
         $this->destination_dto = new SourceDestinationDto($data['destination'] ?? []);
     }
 
-    public function getType(): string {
+    public function getType(): string
+    {
         return $this->type;
     }
 
