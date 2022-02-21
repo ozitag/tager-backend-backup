@@ -3,6 +3,7 @@
 namespace OZiTAG\Tager\Backend\Backup\Dto;
 
 use OZiTAG\Tager\Backend\Backup\Exceptions\InvalidSourceConfigurationException;
+use OZiTAG\Tager\Backend\Core\Dto\Dto;
 
 class SourceFrequencyDto extends Dto
 {

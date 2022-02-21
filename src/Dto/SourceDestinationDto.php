@@ -2,6 +2,7 @@
 
 namespace OZiTAG\Tager\Backend\Backup\Dto;
 
+use OZiTAG\Tager\Backend\Core\Dto\Dto;
 
 class SourceDestinationDto extends Dto
 {
