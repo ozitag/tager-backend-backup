@@ -3,6 +3,7 @@
 namespace OZiTAG\Tager\Backend\Backup\Dto;
 
 use \ZipArchive;
+use OZiTAG\Tager\Backend\Core\Dto\Dto;
 
 class SourceEncryptionDto extends Dto
 {
